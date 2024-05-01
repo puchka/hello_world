@@ -5,7 +5,7 @@ use utils::say_something;
 mod utils;
 
 fn main() {
-    let mut t = time::now();
-    say_something("Hello", &mut t);
-    say_something("Goodbye", &mut t);
+    let t = time::now();
+    say_something("Hello", Some(&t));
+    say_something("Goodbye", None);
 }
